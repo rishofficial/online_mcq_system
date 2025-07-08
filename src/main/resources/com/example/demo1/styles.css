@@ -1,0 +1,284 @@
+.root {
+    -fx-background-color: #162230;
+}
+
+.left-pane {
+    -fx-background-color: #0a1017;
+}
+
+.login-pane {
+    -fx-background-color: #1b2835;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(136, 45, 12, 0.4), 10, 0, 0, 10);
+}
+
+.label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.app-name-label {
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1d72e;
+}
+
+.motto-label {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-text-fill: #bdc3c7;
+}
+
+.login-title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ecf0f1;
+}
+
+.button_log {
+    -fx-background-color: #14212f;
+    -fx-text-fill: #7fadbd;
+    -fx-font-weight: bold;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+}
+
+.button_log:hover {
+    -fx-background-color: #162230;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 15px;
+    -fx-padding: 9 21 9 21;
+    -fx-border-color: #7fadbd;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ecf0f1;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-border-color: #95a5a6;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+    -fx-max-width: 250px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 2px;
+    -fx-font-size: 15px;
+    -fx-padding: 9 11 9 11;
+    -fx-font-weight: bold;
+}
+
+.hbox-role {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-padding: 10 0 10 0;
+    -fx-font-size: 16px;
+    -fx-max-width: 250px;
+}
+
+.hbox-role .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #81a8b6;
+    -fx-padding: 0 8 0 0;
+}
+
+.hbox-role .check-box {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ecf0f1;
+    -fx-padding: 0 8 0 0;
+}
+
+.hbox-role .check-box:selected{
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.hbox-role .check-box:selected .box {
+    -fx-background-color: #81a8b6;
+    -fx-border-color: #7fadbd;
+}
+
+.hyperlink {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 14px;
+    -fx-border-width: 1px;
+    -fx-border-color: #3498db;
+    -fx-padding: 9 11 9 11;
+    -fx-border-radius: 5px;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+    -fx-font-weight: bold;
+}
+
+.error-label {
+    -fx-text-fill: #f63333;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.login-title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ecf0f1;
+}
+
+/* Add this new style */
+.create-account-title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ecf0f1;
+}
+/* General Styles */
+.label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.login-title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ecf0f1;
+}
+
+.motto-label {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-text-fill: #bdc3c7;
+}
+
+/* ================== Dashboard ================== */
+
+.nav-rail {
+    -fx-background-color: #0a1017;
+}
+
+.nav-search-field {
+    -fx-background-color: #1b2835;
+    -fx-text-fill: #ecf0f1;
+    -fx-prompt-text-fill: #7fadbd;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+}
+
+.nav-button {
+    -fx-background-color: #1b2835;
+    -fx-background-radius: 15px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 18px;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #2c3e50;
+}
+
+.nav-button:selected {
+    -fx-background-color: #3498db;
+}
+
+.list-pane {
+    -fx-background-color: #162230;
+    -fx-border-width: 0 1px 0 1px;
+    -fx-border-color: #0a1017;
+}
+
+.list-pane-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 10px 10px 10px;
+}
+
+.chat-list-view {
+    -fx-background-color: #162230;
+}
+
+.chat-list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ecf0f1;
+    -fx-padding: 15px;
+}
+
+.chat-list-view .list-cell:hover {
+    -fx-background-color: #1b2835;
+}
+
+.chat-list-view .list-cell:selected {
+    -fx-background-color: #3498db;
+}
+
+/* ================== COLUMN 3: CONTENT PANE ================== */
+.content-pane {
+    -fx-background-color: #1b2835; /* Lightest background */
+}
+
+
+/* --- Profile Page  --- */
+
+.header-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 10px 10px 10px;
+}
+
+.info-title-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 10px 10px 10px;
+}
+
+.info-data-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.courses-grid {
+    -fx-font-size: 15px;
+    -fx-text-fil: white;
+    -fx-padding: 10px 10px 10px 0px;
+}
+
+.course-title-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 0px;
+}
+
+.button_profile {
+    -fx-background-color: #14212f;
+    -fx-text-fill: #7fadbd;
+    -fx-font-weight: bold;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+}
+
+.button_profile:hover {
+    -fx-background-color: #162230;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #7fadbd;
+}
+
+.separator .line {
+    -fx-border-color: white;
+}
