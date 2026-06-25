@@ -1,0 +1,10 @@
+1q_ss
+1o1_true_ssc
+1o2_false_sa
+1o3_false_sd
+1o4_false_ij
+2q_ij
+2o1_false_ddp
+2o2_true_ddc
+2o3_false_ddf
+2o4_false_diddy

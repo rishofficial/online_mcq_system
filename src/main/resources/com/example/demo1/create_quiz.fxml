@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="320.0" prefWidth="800.0" styleClass="root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.pages.CreateQuizPage">
+    <VBox fillWidth="true" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+        <TextField fx:id="quizNameField" onAction="#UserPressEnter" prefWidth="400.0" promptText="Enter Quiz Name" styleClass="quiz-field" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="quizTopicField" onAction="#UserPressEnter" promptText="Enter Quiz Description" styleClass="quiz-field" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="quizDurationField" onAction="#UserPressEnter" promptText="Enter Quiz Duration (in minutes)" styleClass="quiz-field" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="quizMarksField" onAction="#UserPressEnter" promptText="Enter Total Marks" styleClass="quiz-field" HBox.hgrow="ALWAYS" />
+        <Button fx:id="createQuizButton" onAction="#constructQuiz" styleClass="button_log" text="Create Quiz" />
+        <HBox>
+            <HBox prefHeight="26.0" prefWidth="90.0" spacing="50">
+                <HBox />
+                <HBox />
+            </HBox>
+            <TextField fx:id="questionField" prefHeight="26.0" prefWidth="410.0" promptText="Question 1" styleClass="option-field" />
+        </HBox>
+        <HBox spacing="30.0">
+            <HBox prefHeight="26.0" prefWidth="90.0" spacing="50">
+                <HBox />
+                <HBox />
+            </HBox>
+            <CheckBox fx:id="optionCheckBox1" onAction="#handleCheckButton1" prefHeight="35.0" prefWidth="35.0" />
+            <TextField fx:id="optionField1" prefHeight="26.0" prefWidth="270.0" promptText="Option 1" styleClass="option-field" />
+        </HBox>
+        <HBox spacing="30.0">
+            <HBox prefHeight="26.0" prefWidth="90.0" spacing="50">
+                <HBox />
+                <HBox />
+            </HBox>
+            <CheckBox fx:id="optionCheckBox2" minHeight="35.0" minWidth="35.0" onAction="#handleCheckButton2" prefHeight="35.0" prefWidth="35.0" />
+            <TextField fx:id="optionField2" prefWidth="270.0" promptText="Option 2" styleClass="option-field" />
+        </HBox>
+        <HBox prefHeight="26.0" prefWidth="694.0" spacing="30.0">
+            <HBox prefHeight="26.0" prefWidth="90.0" spacing="50">
+                <HBox />
+                <HBox />
+            </HBox>
+            <CheckBox fx:id="optionCheckBox3" onAction="#handleCheckButton3" prefHeight="35.0" prefWidth="35.0" />
+            <TextField fx:id="optionField3" prefWidth="270.0" promptText="Option 3" styleClass="option-field" />
+        </HBox>
+        <HBox spacing="30.0">
+            <HBox prefWidth="90.0" spacing="50">
+                <HBox />
+                <HBox />
+            </HBox>
+            <CheckBox fx:id="optionCheckBox4" onAction="#handleCheckButton4" prefHeight="35.0" prefWidth="35.0" />
+            <TextField fx:id="optionField4" prefWidth="270.0" promptText="Option 4" styleClass="option-field" />
+        </HBox>
+        <Button fx:id="nextButton" onAction="#handleNextButton" prefHeight="26.0" prefWidth="78.0" styleClass="button_log" text="Next">
+         <VBox.margin>
+            <Insets left="90.0" />
+         </VBox.margin></Button>
+    </VBox>
+</AnchorPane>

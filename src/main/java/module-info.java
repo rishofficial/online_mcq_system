@@ -14,4 +14,6 @@ module com.example.demo1 {
     opens com.example.demo1.threads to javafx.fxml;
     exports com.example.demo1.datatypes;
     opens com.example.demo1.datatypes to javafx.fxml;
+    exports com.example.demo1.Animation;
+    opens com.example.demo1.Animation to javafx.fxml;
 }

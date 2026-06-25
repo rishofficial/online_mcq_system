@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.pages.ChatWindow"
+            prefHeight="720.0" prefWidth="800.0">
+    <top>
+        <HBox styleClass="hbox-user-info" BorderPane.alignment="TOP_CENTER">
+            <VBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT" styleClass="vbox-user-info">
+                <Label fx:id="User1Id" styleClass="label-user-info-id"/>
+                <Label fx:id="User1Name" styleClass="label-user-info-name"/>
+            </VBox>
+            <!-- Vertical separator -->
+            <Pane minWidth="2.0" maxWidth="2.0" prefWidth="2.0" styleClass="user-info-separator"/>
+            <VBox HBox.hgrow="ALWAYS" alignment="CENTER_RIGHT" styleClass="vbox-user-info">
+                <Label fx:id="User2Id" styleClass="label-user-info-id"/>
+                <Label fx:id="User2Name" styleClass="label-user-info-name"/>
+            </VBox>
+        </HBox>
+    </top>
+
+    <center>
+            <ListView fx:id="chatListView" BorderPane.alignment="CENTER" prefHeight="520"/>
+    </center>
+    <bottom>
+        <HBox spacing="10.0" styleClass="chat-input-bar">
+            <TextField fx:id="messageInputField" onAction="#handleSendMessage" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="sendButton" onAction="#handleSendMessage" text="Send"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

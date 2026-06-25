@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo1.pages.PerformanceController"
+            prefWidth="800" prefHeight="720"
+            styleClass="performance-root">
+
+    <VBox spacing="12" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+        <Label fx:id="titleLabel" text="Performance Report" styleClass="performance-title"/>
+        <Label fx:id="quizNameLabel" text="Quiz: " styleClass="performance-label"/>
+        <Label fx:id="timeLabel" text="Time: " styleClass="performance-summary"/>
+        <TableView fx:id="performanceTable" prefHeight="300" >
+            <columns>
+                <TableColumn fx:id="numberCol" text="#" prefWidth="40"/>
+                <TableColumn fx:id="nameCol" text="Name" prefWidth="170"/>
+                <TableColumn fx:id="userIdCol" text="User ID" prefWidth="150"/>
+                <TableColumn fx:id="markCol" text="Mark"/>
+            </columns>
+        </TableView>
+        <Button fx:id="backButton" text="Back" onAction="#handleBackButtonAction" styleClass="performance-back-button"/>
+    </VBox>
+</AnchorPane>

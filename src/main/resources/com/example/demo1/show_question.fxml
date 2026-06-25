@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo1.pages.ShowQuestionPage"
+            prefWidth="800" prefHeight="720"
+            styleClass="question_pane">
+
+    <ListView fx:id="questionListView"
+              styleClass="question-list-view" prefHeight="620" AnchorPane.topAnchor="50" />
+    <Button fx:id="submitButton"
+            text="Submit"
+            layoutX="250" layoutY="350"
+            prefWidth="100"
+            styleClass="submit_button" onAction="#handleSubmitQuiz" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10"/>
+    <Label styleClass="quiz-timer" fx:id="timeLabel" AnchorPane.rightAnchor="120" AnchorPane.topAnchor="10"/>
+</AnchorPane>
