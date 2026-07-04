@@ -1,0 +1,7 @@
+CSE_101 Structured_Programming
+CSE_102 Structured_Programming_lab
+CSE_103 Discrete_Mathematics
+CSE_105 Data_Structures
+CSE_106 Data_Structures_lab
+CSE_107 Object_Oriented_Programming
+CSE_108 Object_Oriented_Programming_lab

@@ -1,0 +1,50 @@
+1q_Which keyword is used to create a class in Java?
+1o1_false_create
+1o2_true_class
+1o3_false_new
+1o4_false_object
+2q_What is the correct way to create an object of a class named "Student"?
+2o1_correct_Student obj = new Student();
+2o2_false_new Student obj = Student();
+2o3_false_Student obj = create Student();
+2o4_false_object Student = new Student();
+3q_Which access modifier makes a member accessible only within the same class?
+3o1_false_public
+3o2_false_protected
+3o3_true_private
+3o4_false_default
+4q_What is the process of hiding internal implementation details called?
+4o1_false_Inheritance
+4o2_false_Polymorphism
+4o3_true_Encapsulation
+4o4_false_Abstraction
+5q_Which keyword is used to inherit a class in Java?
+5o1_false_inherit
+5o2_true_extends
+5o3_false_implements
+5o4_false_super
+6q_What is a constructor in Java?
+6o1_false_A method that destroys objects
+6o2_true_A special method used to initialize objects
+6o3_false_A method that returns values
+6o4_false_A static method
+7q_Which of the following is true about method overloading?
+7o1_false_Methods must have different return types
+7o2_false_Methods must have different names
+7o3_true_Methods must have different parameter lists
+7o4_false_Methods must be in different classes
+8q_What does polymorphism mean in OOP?
+8o1_false_Having multiple classes
+8o2_false_Having multiple constructors
+8o3_true_Having one interface with multiple implementations
+8o4_false_Having multiple variables
+9q_Which keyword is used to call the parent class constructor?
+9o1_false_parent
+9o2_true_super
+9o3_false_this
+9o4_false_base
+10q_What is the default access modifier for a class member in Java?
+10o1_false_private
+10o2_false_public
+10o3_false_protected
+10o4_true_package-private (default)
