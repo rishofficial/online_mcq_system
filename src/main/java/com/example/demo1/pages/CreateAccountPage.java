@@ -1,5 +1,7 @@
 package com.example.demo1.pages;
 
+import com.example.demo1.datatypes.Info;
+import com.example.demo1.threads.socketWrap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,9 +11,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.Socket;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -27,8 +27,6 @@ public class CreateAccountPage implements Initializable {
     public Button createAccountButton;
     public Label errorLabel;
     public Hyperlink backToLoginLink;
-
-    private Socket socket;
     private PrintWriter output;
     private BufferedReader input;
 
@@ -64,25 +62,23 @@ public class CreateAccountPage implements Initializable {
         }
         System.out.println("Creating account for: " + name + ", Age: " + age + ", UserID: " + userId + ", Role: " + role);
         createAccountButton.setDisable(false);
-         try (Socket socket = new Socket("localhost", 6000);
-             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-             BufferedReader in = new BufferedReader(new java.io.InputStreamReader(socket.getInputStream()))) {
-             out.println("CREATE");
-             out.println(name);
-             out.println(age);
-             out.println(userId);
-             out.println(password);
-             out.println(confirmPassword);
-             out.println(role);
+         try (socketWrap socket = new socketWrap(Info.ip , Info.port)) {
+             socket.writeLine("CREATE");
+             socket.writeLine(name);
+             socket.writeLine(age);
+             socket.writeLine(userId);
+             socket.writeLine(password);
+             socket.writeLine(confirmPassword);
+             socket.writeLine(role);
 
-             String response = in.readLine();
+             String response = socket.readLine();
              if(response.equals("YES")){
                 errorLabel.setText("Account Successfully Created!");
              }else{
                 errorLabel.setText("UserID already exist.");
              }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             errorLabel.setText("Server connection failed.");
         } finally {
             createAccountButton.setDisable(false);

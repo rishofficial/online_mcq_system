@@ -45,15 +45,17 @@
     -fx-background-radius: 5;
     -fx-padding: 8 20 8 20;
     -fx-cursor: hand;
+    transition: -fx-background-color 0.2s, -fx-text-fill 0.2s, -fx-font-size 0.15s, -fx-padding 0.2s, -fx-border-color 0.2s;
 }
 
 .button_log:hover {
     -fx-background-color: #162230;
     -fx-text-fill: #ffffff;
     -fx-font-size: 15px;
-    -fx-padding: 9 21 9 21;
+    -fx-padding: 9 20 9 20;
     -fx-border-color: #7fadbd;
 }
+
 
 .text-field, .password-field {
     -fx-background-color: #2c3e50;
@@ -63,10 +65,18 @@
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-font-size: 14px;
-    -fx-max-width: 250px;
+    transition: -fx-border-color 0.3s, -fx-border-width 0.2s, -fx-font-size 0.2s, -fx-padding 0.2s, -fx-font-weight 0.2s;
 }
 
 .text-field:focused, .password-field:focused {
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 2px;
+    -fx-font-size: 15px;
+    -fx-padding: 9 11 9 11;
+    -fx-font-weight: bold;
+}
+
+.text-field:focused, .password-field:hover {
     -fx-border-color: #81a8b6;
     -fx-border-width: 2px;
     -fx-font-size: 15px;
@@ -93,9 +103,20 @@
     -fx-font-size: 15px;
     -fx-text-fill: #ecf0f1;
     -fx-padding: 0 8 0 0;
+    transition: -fx-text-fill 0.2s, -fx-font-weight 0.4s, -fx-background-color 0.2s, -fx-border-color 0.2s;
 }
 
-.hbox-role .check-box:selected{
+.hbox-role .check-box .box {
+    transition: -fx-background-color 0.4s, -fx-border-color 0.4s;
+}
+
+.hbox-role .check-box:hover {
+    -fx-background-color: #3a4a57;
+    -fx-border-color: #81a8b6;
+    -fx-text-fill: #ffffff;
+}
+
+.hbox-role .check-box:selected {
     -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
 }
@@ -112,40 +133,33 @@
     -fx-border-color: #3498db;
     -fx-padding: 9 11 9 11;
     -fx-border-radius: 5px;
+    transition: -fx-text-fill 0.2s, -fx-font-weight 0.15s, -fx-padding 0.2s, -fx-border-color 0.2s;
 }
 
 .hyperlink:hover {
     -fx-underline: true;
     -fx-font-weight: bold;
+    -fx-text-fill: #217dbb;
+    -fx-padding: 9 16 9 16;
+    -fx-border-color: #217dbb;
 }
+
 
 .error-label {
     -fx-text-fill: #f63333;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
 }
-.login-title-label {
-    -fx-font-size: 28px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ecf0f1;
-}
 
-/* Add this new style */
 .create-account-title-label {
     -fx-font-size: 28px;
     -fx-font-weight: bold;
     -fx-text-fill: #ecf0f1;
 }
-/* General Styles */
+
 .label {
     -fx-text-fill: #ecf0f1;
     -fx-font-family: 'Segoe UI', sans-serif;
-}
-
-.login-title-label {
-    -fx-font-size: 28px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ecf0f1;
 }
 
 .motto-label {
@@ -180,6 +194,7 @@
     -fx-max-width: 50px;
     -fx-max-height: 50px;
     -fx-cursor: hand;
+    transition: -fx-background-color 0.3s;
 }
 
 .nav-button:hover {
@@ -191,9 +206,9 @@
 }
 
 .list-pane {
-    -fx-background-color: #162230;
+    -fx-background-color: #080f17;
     -fx-border-width: 0 1px 0 1px;
-    -fx-border-color: #0a1017;
+    -fx-border-color: #2c3e50;
 }
 
 .list-pane-title {
@@ -204,26 +219,65 @@
 }
 
 .chat-list-view {
-    -fx-background-color: #162230;
+    -fx-background-color: #080f17;
 }
 
 .chat-list-view .list-cell {
     -fx-background-color: transparent;
-    -fx-text-fill: #ecf0f1;
     -fx-padding: 15px;
+    -fx-border-width: 0 2px 0 2px;
+    -fx-transition: all 0.3s ease-out;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 16px;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, box-shadow 0.1s;
+}
+
+.chat-list-view .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    visibility: hidden;
+}
+
+.chat-list-view .list-cell:empty :hover {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    visibility: hidden;
 }
 
 .chat-list-view .list-cell:hover {
-    -fx-background-color: #1b2835;
+    -fx-transform: scale(1.03) translateY(-4px);
+    -fx-border-color: linear-gradient(to top, #47788a 100%, transparent 100%);
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+    -fx-text-fill: #47788a;
+    z-index: 2;
 }
 
+
 .chat-list-view .list-cell:selected {
-    -fx-background-color: #3498db;
+    -fx-transform: scale(1.03) translateY(-4px);
+    -fx-border-color: linear-gradient(to top, #47788a 100%, transparent 100%);
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+    -fx-text-fill: #47788a;
+    z-index: 2;
 }
+
+.chat-list-view .list-cell:selected:hover {
+    -fx-transform: scale(1.03) translateY(-4px);
+    -fx-border-color: linear-gradient(to top, #47788a 100%, transparent 100%);
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+    -fx-text-fill: #47788a;
+    z-index: 2;
+}
+
 
 /* ================== COLUMN 3: CONTENT PANE ================== */
 .content-pane {
-    -fx-background-color: #1b2835; /* Lightest background */
+    -fx-background-color: #080f17; /* Lightest background */
 }
 
 
@@ -281,4 +335,453 @@
 
 .separator .line {
     -fx-border-color: white;
+}
+
+
+/* ================== Course List Styles ================== */
+
+.drop_course {
+    -fx-background-color: rgb(11, 26, 44);
+}
+
+.list-view {
+    -fx-background-color: #080f17;
+    -fx-padding: 0px 20px;
+    -fx-pref-width: 800px;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 5px 0px;
+}
+
+.list-view .scroll-bar:vertical,
+.list-view .scroll-bar:horizontal {
+    -fx-max-width: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-opacity: 0;
+}
+
+.course-cell {
+    -fx-background-color: #1b2835;
+    -fx-padding: 15px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for the cell */
+.list-cell:hover .course-cell {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #81a8b6;
+}
+
+.list-cell.course-selected .course-cell {
+    -fx-border-color: #2ecc71;
+}
+
+.list-cell.course-not-selected .course-cell {
+    -fx-border-color: #e74c3c;
+}
+
+.list-cell.course-selected .course-name,
+.list-cell.course-selected .course-id {
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.list-cell.course-not-selected .course-name,
+.list-cell.course-not-selected .course-id {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.course-cell .label {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 13px;
+}
+
+/* ================== showing previous chat users. ================== */
+
+.user-list-view .user-cell {
+    -fx-padding: 10px 15px;
+    -fx-spacing: 4px;
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 0 0 1px 0; /* Bottom border for each cell */
+}
+
+/* Style for the labels inside the user cell */
+.user-list-view .user-cell .label {
+    -fx-text-fill: #ecf0f1; /* Light text for dark background */
+}
+
+/* Style for selected list view cells */
+.user-list-view .list-cell:filled:selected,
+.user-list-view .list-cell:filled:selected .user-cell {
+    -fx-background-color: #2980b9;
+}
+
+/* Style for hovered list view cells */
+.user-list-view .list-cell:filled:hover {
+    -fx-background-color: #34495e;
+}
+
+
+/* ================== Chat Styles ================== */
+.hbox-user-info, .chat-input-bar {
+    -fx-background-color: #101923;
+    -fx-padding: 12 18 12 18;
+    -fx-min-height: 48px;
+    -fx-alignment: center;
+}
+
+.hbox-user-info {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #244258;
+}
+
+.chat-input-bar {
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #244258;
+}
+
+
+.vbox-user-info {
+    -fx-padding: 0 14 0 14;
+}
+
+.label-user-info-id {
+    -fx-text-fill: #7fadbd;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: 600;
+}
+
+.label-user-info-name {
+    -fx-text-fill: #81a8b6;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: 600;
+}
+
+.user-info-separator {
+    -fx-background-color: #244258;
+    -fx-border-radius: 2;
+}
+
+
+.sender-bubble {
+    -fx-background-color: #0078FF;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 18px 18px 4px 18px;
+    -fx-padding: 10px 18px;
+    -fx-font-size: 15px;
+    -fx-max-width: 500px;
+}
+
+.receiver-bubble {
+    -fx-background-color: #e5e5ea;
+    -fx-text-fill: #222;
+    -fx-background-radius: 18px 18px 18px 4px;
+    -fx-padding: 10px 18px;
+    -fx-font-size: 15px;
+    -fx-max-width: 500px;
+}
+
+/* ============= QUIZ LIST CUSTOM STYLES ============= */
+
+.quiz-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1d72e;
+    -fx-font-size: 18px;
+}
+.quiz-qcount, .quiz-timelimit {
+    -fx-text-fill: #7fadbd;
+    -fx-font-size: 13px;
+}
+.show-performance-button {
+    -fx-background-color: #14212f;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-background-radius: 2px;
+    -fx-padding: 8 18 8 18;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.show-performance-button:hover {
+    -fx-background-color: #2c3e50;
+}
+
+.separator {
+    -fx-background-color: #31445b;
+}
+
+.quiz_show_pane{
+    -fx-background-color: #080f17;
+}
+
+.quiz-list-view {
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 0;
+}
+
+.quiz-list-view .list-cell {
+    -fx-background-color: #080f17;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 0px 0 1 0;
+    -fx-border-style: solid;
+    -fx-padding: 14px 18px 10px 18px;
+    -fx-effect: dropshadow(three-pass-box, rgba(49,88,128,0.10), 2, 0, 0, 1);
+    -fx-margin-bottom: 10px;
+    -fx-transition: background-color 0.2s;
+}
+
+.quiz-list-view .list-cell:selected {
+    -fx-background-color: #23375b;
+    -fx-border-color: #f1d72e;
+}
+
+.quiz-list-view .list-cell:hover {
+    -fx-border-color: linear-gradient(to top, #47788a 100%, transparent 100%);
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: #47788a;
+    z-index: 2;
+}
+
+.quiz-list-view .list-cell:empty{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    visibility: hidden;
+}
+
+
+/* ==== Quiz create Button Styling ==== */
+.start-quiz-button {
+}
+
+/* Demo custom style for option fields (optional) */
+.option-field {
+    -fx-background-color: #233046;
+    -fx-text-fill: #b7ffde;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 1px;
+}
+
+#nextButton {
+    -fx-background-color: #f1d72e;
+    -fx-text-fill: #162230;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+/* ==== Performance View Styling ==== */
+
+.performance-root {
+    -fx-background-color: #1b2835;
+    -fx-padding: 30px;
+    -fx-background-radius: 14px;
+}
+
+.performance-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1d72e;
+    -fx-padding: 0 0 10 0;
+}
+
+.performance-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7fadbd;
+    -fx-padding: 1 0 4 0;
+}
+
+.performance-summary {
+    -fx-font-size: 14px;
+    -fx-text-fill: #b7ffde;
+    -fx-padding: 1 0 12 0;
+}
+
+#performanceTable {
+    -fx-background-color: #233046;
+    -fx-border-color: #315880;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+#performanceTable .column-header {
+    -fx-background-color: #263246;
+}
+
+#performanceTable .column-header .label {
+    -fx-text-fill: #f1d72e;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+}
+
+#performanceTable .table-row-cell {
+    -fx-background-color: #233046;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 14px;
+}
+
+#performanceTable .table-row-cell:odd {
+    -fx-background-color: #263246;
+}
+
+#performanceTable .table-row-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+#performanceTable .table-cell {
+    -fx-text-fill: #81a8b6;
+    -fx-alignment: center;
+}
+
+#performanceTable .label {
+    -fx-text-fill: #81a8b6;
+}
+
+#performanceTable .text {
+    -fx-fill: #81a8b6;
+}
+
+.quiz-field {
+    -fx-background-color: #233046;
+    -fx-text-fill: #b7ffde;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 1px;
+    -fx-pref-width:  500px;
+}
+
+/* ==== Quiz print Styling ==== */
+
+.question-list-view {
+    -fx-background-color: #0a1017;
+    -fx-border-width: 0px;
+    -fx-font-size: 15px;
+    -fx-padding: 8px 12px 8px 12px;
+}
+.question-list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 8px 0;
+    -fx-border-width: 0  0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: #81a8b6;
+}
+
+.question-list-view .list-cell:empty {
+    -fx-background-color: transparent;
+    visibility:  hidden;
+}
+
+.question-cell {
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 0px;
+    -fx-padding: 18px;
+    -fx-spacing: 14px;
+}
+.question-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #81a8b6;
+    -fx-wrap-text: true;
+    -fx-padding: 0 0 10 0;
+}
+
+.option-label {
+    -fx-background-color: rgba(10, 16, 23, 0.38);
+    -fx-border-color: #426588;
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(three-pass-box, rgba(73,210,255,0.09), 3, 0, 2, 2);
+    -fx-min-width: 370px;
+    -fx-background-insets: 0;
+    transition: all 0.21s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.option-label:hover {
+    -fx-background-color: #47788a;
+    -fx-text-fill: #fff;
+}
+
+.option-label:selected {
+    -fx-background-color: #47788a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.options-container {
+    -fx-spacing: 11px;
+    -fx-padding: 10 0 0 20;
+}
+
+.quiz-timer {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #81a8b6;
+    -fx-background-color: #14212f;
+    -fx-padding: 8 20 8 20;
+    -fx-border-color: #47788a;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Jetbrains Mono','Courier New',monospace;
+}
+
+.submit_button {
+    -fx-background-color: #14212f;
+    -fx-text-fill: #7fadbd;
+    -fx-font-weight: bold;
+    -fx-border-color: #81a8b6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+    transition: -fx-background-color 0.2s, -fx-text-fill 0.2s, -fx-font-size 0.15s, -fx-padding 0.2s, -fx-border-color 0.2s;
+}
+
+.submit_button:hover {
+    -fx-background-color: #1b2835;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #7fadbd;
+}
+
+.root, .question_pane, .anchor-pane {
+    -fx-background-color: #0a1017 !important;
+}
+
+.question_pane {
+    -fx-background-color: #0a1017 !important;
+    -fx-border-color: #47788a;
+    -fx-border-width: 1px;
+}
+
+.anchor-pane {
+    -fx-background-color: #0a1017 !important;
 }

@@ -14,7 +14,7 @@ public class BuetHub extends Application {
     @Override
     public void start(Stage stage) throws IOException{
         {
-            FXMLLoader fxmlLoader = new FXMLLoader(BuetHub.class.getResource("Dashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(BuetHub.class.getResource("login_page.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
 
             String css=Objects.requireNonNull(this.getClass().getResource("styles.css")).toExternalForm();

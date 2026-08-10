@@ -9,25 +9,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.CheckBox?>
+
 <AnchorPane prefHeight="700.0" prefWidth="1200.0" styleClass="root" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.pages.Login">
     <HBox alignment="CENTER" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <VBox alignment="CENTER" prefHeight="700.0" prefWidth="800.0" styleClass="left-pane">
-            <Label styleClass="app-name-label" text="BUET HUB"/>
-            <Label styleClass="motto-label" text="Connecting Minds, Building Futures."/>
+            <HBox>
+                <HBox prefWidth="230.0"/>
+                <VBox>
+                    <HBox styleClass="app-name-label" fx:id="appNameLabel"/>
+                    <HBox styleClass="motto-label" fx:id="appMotoLabel"/>
+                </VBox>
+            </HBox>
         </VBox>
-
         <VBox alignment="CENTER" maxWidth="400.0" prefHeight="700.0" prefWidth="400.0" spacing="20.0"
               styleClass="login-pane">
             <padding>
                 <Insets bottom="20.0" left="40.0" right="40.0" top="20.0"/>
             </padding>
             <Label styleClass="login-title-label" text="Member Login"/>
-            <TextField fx:id="userIdField" promptText="User ID"/>
-            <PasswordField fx:id="passwordField" promptText="Password"/>
+            <TextField fx:id="userIdField" onAction="#UserPressEnter" promptText="User ID"/>
+            <PasswordField fx:id="passwordField" onAction="#UserPressEnter" promptText="Password"/>
             <HBox styleClass="hbox-role" alignment="CENTER" spacing="10.0">
                 <Label text="Role:"/>
                 <CheckBox fx:id="teacherCheckBox" text="Teacher" onAction="#handlePersonIsTeacher"/>
